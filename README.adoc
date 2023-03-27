@@ -6,6 +6,7 @@ DC (Dremio Cloud) Comic is a light cloud application framework.
 == Rationale
 
 Cloud applications require to be the most reactive as possible, and fast as possible to bootstrap. DC Comic chose to:
+
 * Be build time oriented: only delegate to runtime the bean resolution (to enable dynamic module aggregation) and not the bean and model discovery nor proxy generation,
 * Stay flexible: even if the model is generated at build time you can generally still customize it by removing a bean and adding your own one,
 * Be native friendly: some applications need to be native to start very fast and bypass the classloading and a bunch of JVM init. For that purpose, DC Comic is GraalVM friendly.

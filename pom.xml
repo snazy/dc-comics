@@ -16,3 +16,252 @@
     under the License.
 
 -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.dremio.cloud.comic</groupId>
+    <artifactId>dc-comic</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>DC Comic</name>
+    <description>Reflectionless and selfcontained cloud application framework (no business code dependency on jakarta/spring/guice).</description>
+    <url>https://jbonofre.github.com/dc-comic</url>
+
+    <properties>
+        <maven.compiler.release>17</maven.compiler.release>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <tomcat.version>10.1.7</tomcat.version>
+        <junit-jupiter.version>5.9.1</junit-jupiter.version>
+    </properties>
+
+    <modules>
+        <module>dc-comic-api</module>
+        <module>dc-comic-processor</module>
+        <module>dc-comic-build-api</module>
+        <module>dc-comic-logging</module>
+        <module>dc-comic-json</module>
+        <module>dc-comic-http-server</module>
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit-jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>3.2.0</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId>
+                <version>3.0.1</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.3.0</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version>
+                <configuration>
+                    <release>${maven.compiler.version}</release>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                    <parameters>true</parameters>
+                    <compilerArgs>
+                        <compilerArg>-Xlint:unchecked</compilerArg>
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0</version>
+                <configuration>
+                    <trimStackTrace>true</trimStackTrace>
+                    <systemPropertyVariables>
+                        <java.util.logging.manager>com.dremio.cloud.comic.logging.jul.ComicLogManager</java.util.logging.manager>
+                        <java.net.preferIPv4Stack>true</java.net.preferIPv4Stack>
+                    </systemPropertyVariables>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.3.0</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>3.0.0-M7</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.8.2</version>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.1.0</version>
+            </plugin>
+            <plugin>
+                <groupId>com.mycila</groupId>
+                <artifactId>license-maven-plugin</artifactId>
+                <version>4.2.rc3</version>
+                <executions>
+                    <execution>
+                        <id>check-license</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <inherited>false</inherited>
+                <configuration>
+                    <aggregate>true</aggregate>
+                    <mapping>
+                        <adoc>DOUBLESLASH_STYLE</adoc>
+                    </mapping>
+                    <licenseSets>
+                        <licenseSet>
+                            <inlineHeader><![CDATA[Copyright (c) ${project.inceptionYear} - ${project.organization.name} - ${project.organization.url}
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+]]></inlineHeader>
+                            <useDefaultExclude>true</useDefaultExclude>
+                            <includes>
+                                <include>**/*.properties</include>
+                                <include>**/*.java</include>
+                                <include>**/*.xml</include>
+                                <include>**/*.yaml</include>
+                            </includes>
+                            <excludes>
+                                <exclude>LICENSE</exclude>
+                                <exclude>**/*.adoc</exclude>
+                                <exclude>**/*.idea</exclude>
+                                <exclude>**/target/**</exclude>
+                                <exclude>**/generated/**</exclude>
+                                <exclude>**/.m2/**</exclude>
+                            </excludes>
+                        </licenseSet>
+                    </licenseSets>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>release</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <version>3.4.1</version>
+                        <executions>
+                            <execution>
+                                <id>attach-javadocs</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <source>11</source>
+                            <doclint>none</doclint>
+                            <encoding>UTF-8</encoding>
+                            <failOnError>false</failOnError>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>3.0.1</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://github.com/jbonofre/dc-comic/blob/main/LICENSE</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>JB Onofré</name>
+            <id>jbonofre</id>
+            <roles>
+                <role>Contributor</role>
+            </roles>
+            <timezone>GMT+1</timezone>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:https://github.com/jbonofre/dc-comic</connection>
+        <developerConnection>scm:git:https://github.com/jbonofre/dc-comic</developerConnection>
+        <url>https://github.com/jbonofre/dc-comic</url>
+    </scm>
+
+    <organization>
+        <name>Dremio</name>
+        <url>https://www.dremio.com</url>
+    </organization>
+
+    <inceptionYear>2023</inceptionYear>
+
+</project>
