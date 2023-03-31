@@ -44,6 +44,7 @@
         <module>dc-comic-logging</module>
         <module>dc-comic-json</module>
         <module>dc-comic-http-server</module>
+        <module>dc-comic-testing</module>
     </modules>
 
     <dependencies>
