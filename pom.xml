@@ -47,6 +47,7 @@
         <module>dc-comic-testing</module>
         <module>dc-comic-http-client</module>
         <module>dc-comic-kubernetes-client</module>
+        <module>dc-comic-observability</module>
     </modules>
 
     <dependencies>
