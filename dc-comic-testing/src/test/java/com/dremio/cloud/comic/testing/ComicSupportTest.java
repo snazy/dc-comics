@@ -31,5 +31,5 @@ public class ComicSupportTest {
         assertNotNull(emitter);
         assertNotNull(field);
     }
-    
+
 }

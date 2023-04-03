@@ -45,6 +45,7 @@
         <module>dc-comic-json</module>
         <module>dc-comic-http-server</module>
         <module>dc-comic-testing</module>
+        <module>dc-comic-http-client</module>
         <module>dc-comic-kubernetes-client</module>
     </modules>
 
