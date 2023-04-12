@@ -13,7 +13,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.dremio.cloud.comlc.processor.internal;
+package com.dremio.cloud.comic.processor.internal;
 
 import com.dremio.cloud.comic.build.api.container.DetectableContext;
 

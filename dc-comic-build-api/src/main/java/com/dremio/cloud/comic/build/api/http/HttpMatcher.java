@@ -46,6 +46,11 @@ public @interface HttpMatcher {
 
     PathMatching pathMatching() default PathMatching.IGNORED;
 
+    /**
+     * @return the path to match respecting {@link #pathMatching()} matching.
+     */
+    String path() default "";
+
     enum PathMatching {
         /**
          * Path is not matched - ignored.

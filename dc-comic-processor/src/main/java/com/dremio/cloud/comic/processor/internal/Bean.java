@@ -13,7 +13,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.dremio.cloud.comlc.processor.internal;
+package com.dremio.cloud.comic.processor.internal;
 
 import javax.lang.model.element.Element;
 import javax.lang.model.element.Modifier;

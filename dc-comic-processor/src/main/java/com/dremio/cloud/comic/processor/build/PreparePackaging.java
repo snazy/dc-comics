@@ -13,7 +13,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.dremio.cloud.comlc.processor.build;
+package com.dremio.cloud.comic.processor.build;
 
 import java.io.File;
 import java.io.IOException;
@@ -28,7 +28,7 @@ public final class PreparePackaging {
 
     public static void main(final String... args) throws IOException {
         final var classes = Path.of(args[0]);
-        final var newOutBase = classes.resolve("dc/comic/annotationprocessor/precompiled");
+        final var newOutBase = classes.resolve("comic/annotationprocessor/precompiled");
         Files.walkFileTree(classes, new SimpleFileVisitor<>() {
            public FileVisitResult visitFile(final Path file, final BasicFileAttributes attrs) throws IOException {
                final var relative = classes.relativize(file).toString().replace(File.separatorChar, '/');

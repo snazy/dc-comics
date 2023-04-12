@@ -13,7 +13,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.dremio.cloud.comlc.processor;
+package com.dremio.cloud.comic.processor;
 
 import javax.annotation.processing.Completion;
 import javax.annotation.processing.ProcessingEnvironment;
@@ -144,7 +144,7 @@ public class ComicProcessor implements Processor {
         }
 
         private String toResource(final String name) {
-            return "dc/comic/annotationprocessor/precompiled/" + name.replace('.', '/') + ".classF";
+            return "comic/annotationprocessor/precompiled/" + name.replace('.', '/') + ".classF";
         }
 
     }
