@@ -1,22 +1,23 @@
-= Dremio Cloud Comic
+= Dremio Cloud Comics
 
 [abstract]
-DC (Dremio Cloud) Comic is a light cloud application framework.
+DC (Dremio Cloud) Comics is a cloud application platform.
 
 == Rationale
 
-Cloud applications require to be the most reactive as possible, and fast as possible to bootstrap. DC Comic chose to:
+With our objective to DevX (Developer eXcellence), we identified some points where we think a framework would help:
 
-* Be build time oriented: only delegate to runtime the bean resolution (to enable dynamic module aggregation) and not the bean and model discovery nor proxy generation,
-* Stay flexible: even if the model is generated at build time you can generally still customize it by removing a bean and adding your own one,
-* Be native friendly: some applications need to be native to start very fast and bypass the classloading and a bunch of JVM init. For that purpose, DC Comic is GraalVM friendly.
-* Provide turnkey services: DC Comic provides a wide range of services that cloud applications can directly use.
+* Reduce the boilerplate to focus on business code
+* Share a common backbone between our cloud components, increasing quality and productivity
+* Improve gRPC communication with a strong typing via managed channel, introducing a gRPC client proxy
+* Improve and efficient container image creation and seamless integration with Kubernetes
+* Improve our testing layers, reducing the prequisites to test our components, and better leveraging mocks
 
 == Documentation
 
-See https://jbonofre.github.io/dc-comic
+See https://jbonofre.github.io/dc-comics
 
 == Requirements
 
 * Apache Maven >= 3.8
-* Java >= 17
+* Java >= 11
