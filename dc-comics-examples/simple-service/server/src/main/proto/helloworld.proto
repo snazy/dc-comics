@@ -1,73 +1,23 @@
-/*
- * Copyright (C) 2023 Dremio Corporation.
- */
 syntax = "proto3";
 
 option java_multiple_files = true;
 option java_package = "com.dremio.cloud.comics.examples.simple";
-option java_outer_classname = "SimpleProto";
-option objc_class_prefix = "Ex";
+option java_outer_classname = "HelloWorldProto";
 
-package simpleservice;
+package helloworld;
 
-import "google/protobuf/any.proto";
-import "google/protobuf/empty.proto";
-
-service SimpleService {
-
-  rpc ShowExample (Request) returns (Reply) {}
-  rpc ShowRetry (Request) returns (Reply) {}
-
-  // key-value store APIs
-  rpc add(AddRequest) returns (stream AddResponse) {}
-  rpc remove(RemoveRequest) returns (google.protobuf.Empty) {}
-  rpc lookup(LookupRequest) returns (stream LookupResponse) {}
+// The greeting service definition.
+service Greeter {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
 }
 
-message Request {
-  string exampleString = 1;
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
 }
 
-message Reply {
-  string exampleMessage = 1;
-}
-
-message AddRequest {
-  string key = 1;
-  string value = 2;
-}
-
-message AddResponse {
-  string value = 1;
-}
-
-message RemoveRequest {
-  string key = 1;
-}
-
-message LookupRequest {
-  string key = 1;
-}
-
-message LookupResponse {
-  string value = 1;
-}
-
-message ExampleSagaCommand {
-  oneof cmd {
-    AddRequest add = 1;
-    RemoveRequest remove = 2;
-  }
-}
-
-message ExampleSagaResponse {
-  oneof resp {
-    AddResponse add = 3;
-    google.protobuf.Empty remove = 4;
-  }
-}
-
-message ExamplePodCastMessage {
-  string type = 1;
-  string payload = 2;
+// The response message containing the greetings
+message HelloReply {
+  string message = 1;
 }

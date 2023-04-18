@@ -30,12 +30,8 @@
     <description>Reflectionless and selfcontained cloud application framework (no business code dependency on jakarta/spring/guice).</description>
     <url>https://jbonofre.github.com/dc-comics</url>
 
-    <properties>
-        <maven.compiler.release>11</maven.compiler.release>
-        <quarkus.version>3.0.0.CR2</quarkus.version>
-    </properties>
-
     <modules>
+        <module>dc-comics-platform</module>
 		<module>dc-comics-examples</module>
     </modules>
 
