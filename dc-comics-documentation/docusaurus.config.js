@@ -83,6 +83,11 @@ const config = {
 					{
 						type: 'html',
 						position: 'right',
+						value: '<a href="https://www.quarklus.io"><img src="https://www.vhv.rs/dpng/d/257-2577905_quarkus-logo-png-transparent-png.png" width="80px"/></a>',
+					},
+					{
+						type: 'html',
+						position: 'right',
 						value: '<a href="https://www.dremio.com"><img src="https://www.dremio.com/wp-content/uploads/2022/03/Dremio-logo.png" width="80px"/></a>',
 					}
         ],
