@@ -83,7 +83,7 @@ const config = {
 					{
 						type: 'html',
 						position: 'right',
-						value: '<a href="https://www.quarklus.io"><img src="https://www.vhv.rs/dpng/d/257-2577905_quarkus-logo-png-transparent-png.png" width="80px"/></a>',
+						value: '<a href="https://www.quarkus.io"><img src="https://www.vhv.rs/dpng/d/257-2577905_quarkus-logo-png-transparent-png.png" width="40px"/></a>',
 					},
 					{
 						type: 'html',
