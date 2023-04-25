@@ -40,14 +40,9 @@
     </dependencyManagement>
 
     <dependencies>
-        <!-- TODO it should come out of the box -->
         <dependency>
             <groupId>com.dremio.cloud.comics</groupId>
-            <artifactId>dc-comics-banner</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.dremio.cloud.comics</groupId>
-            <artifactId>dc-comics-extension</artifactId>
+            <artifactId>dc-comics</artifactId>
         </dependency>
     </dependencies>
 

@@ -23,7 +23,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.dremio.cloud.comics</groupId>
-    <artifactId>dc-comics</artifactId>
+    <artifactId>dc-comics-parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>DC Comics</name>
@@ -35,6 +35,7 @@
         <module>dc-comics-banner</module>
         <!-- <module>dc-comics-maven-plugin</module> -->
         <module>dc-comics-extension</module>
+        <module>dc-comics</module>
 		<module>dc-comics-examples</module>
     </modules>
 
