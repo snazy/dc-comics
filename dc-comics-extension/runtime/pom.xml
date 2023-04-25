@@ -31,18 +31,6 @@
     <artifactId>dc-comics-extension</artifactId>
     <name>DC Comics :: Extension</name>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>com.dremio.cloud.comics</groupId>
-                <artifactId>dc-comics-bom</artifactId>
-                <version>${project.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
     <dependencies>
         <dependency>
             <groupId>io.quarkus</groupId>

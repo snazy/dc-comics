@@ -22,18 +22,27 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>com.dremio.cloud.comics</groupId>
-        <artifactId>dc-comics-examples</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
-    </parent>
+    <groupId>com.dremio.cloud.comics.examples</groupId>
+    <artifactId>first-service</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
 
-    <artifactId>dc-comics-examples-simple-service</artifactId>
-    <name>DC Comics :: Examples :: Simple Service</name>
-    <packaging>pom</packaging>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.dremio.cloud.comics</groupId>
+                <artifactId>dc-comics-bom</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
-    <modules>
-        <module>server</module>
-    </modules>
+    <dependencies>
+        <dependency>
+            <groupId>com.dremio.cloud.comics</groupId>
+            <artifactId>dc-comics-extension</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>

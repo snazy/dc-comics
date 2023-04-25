@@ -33,7 +33,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>simple-service</module>
+        <module>first-service</module>
     </modules>
 
 </project>

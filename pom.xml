@@ -36,6 +36,43 @@
 		<module>dc-comics-examples</module>
     </modules>
 
+    <properties>
+        <quarkus.version>3.0.0.CR2</quarkus.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- Quarkus -->
+            <dependency>
+                <groupId>io.quarkus</groupId>
+                <artifactId>quarkus-core</artifactId>
+                <version>${quarkus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.quarkus</groupId>
+                <artifactId>quarkus-core-deployment</artifactId>
+                <version>${quarkus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.quarkus</groupId>
+                <artifactId>quarkus-kubernetes-client</artifactId>
+                <version>${quarkus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.quarkus</groupId>
+                <artifactId>quarkus-grpc</artifactId>
+                <version>${quarkus.version}</version>
+            </dependency>
+
+            <!-- DC Comics -->
+            <dependency>
+                <groupId>com.dremio.cloud.comics</groupId>
+                <artifactId>dc-comics-extension</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
