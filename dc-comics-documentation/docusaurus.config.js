@@ -6,20 +6,20 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'DC Comic',
-  tagline: 'Dremio Cloud framework',
+  title: 'DC Comics',
+  tagline: 'Dremio Cloud service framework',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
   url: 'https://jbonofre.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/dc-comic',
+  baseUrl: '/dc-comics',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'jbonofre', // Usually your GitHub org/user name.
-  projectName: 'dc-comic', // Usually your repo name.
+  projectName: 'dc-comics', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -65,7 +65,7 @@ const config = {
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
         logo: {
-          alt: 'DC Comic',
+          alt: 'DC Comics',
           src: 'img/logo.svg',
         },
         items: [
@@ -77,7 +77,7 @@ const config = {
           },
           {
             label: 'GitHub',
-            href: 'https://github.com/jbonofre/dc-comic',
+            href: 'https://github.com/jbonofre/dc-comics',
             position: 'right',
           },
 					{
@@ -92,11 +92,11 @@ const config = {
         links: [
           {
             label: 'Issues',
-            href: 'https://github.com/jbonofre/dc-comic/issues',
+            href: 'https://github.com/jbonofre/dc-comics/issues',
           },
           {
             label: 'Ci/CD',
-            href: 'https://github.com/jbonofre/dc-comic/actions',
+            href: 'https://github.com/jbonofre/dc-comics/actions',
           },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Dremio, Inc. Built with Docusaurus.`

@@ -16,7 +16,7 @@ function HomepageHeader() {
           <img src="img/dc-comics.png" width="20%"/>
         </h1>
         <div style={{ color: 'black' }}>
-          DC Comic is the Dremio Cloud application framework.<br/>
+          DC Comics is the Dremio Cloud service framework.<br/>
           It provides the common backbone including all needed features to develop cloud applications efficiently.
         </div>
       </div>
@@ -28,7 +28,7 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title="DC Comic"
+      title="DC Comics"
       description="Dremio Cloud application framework">
       <HomepageHeader />
       <main>

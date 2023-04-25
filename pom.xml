@@ -31,7 +31,8 @@
     <url>https://jbonofre.github.com/dc-comics</url>
 
     <modules>
-        <module>dc-comics-platform</module>
+        <module>dc-comics-bom</module>
+        <module>dc-comics-extension</module>
 		<module>dc-comics-examples</module>
     </modules>
 

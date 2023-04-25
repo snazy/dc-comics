@@ -24,24 +24,35 @@
 
     <parent>
         <groupId>com.dremio.cloud.comics</groupId>
-        <artifactId>dc-comics</artifactId>
+        <artifactId>dc-comics-extension-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>dc-comics-platform</artifactId>
-    <packaging>pom</packaging>
-    <name>DC Comics :: Platform</name>
+    <artifactId>dc-comics-extension</artifactId>
+    <name>DC Comics :: Extension</name>
 
-    <properties>
-        <quarkus.version>3.0.0.CR2</quarkus.version>
-    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-grpc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-kubernetes-client</artifactId>
+        </dependency>
+    </dependencies>
 
-    <dependencyManagement>
-        <dependencies>
-            <!-- Quarkus -->
-            <!-- Quarkus Platform Descriptor -->
-
-        </dependencies>
-    </dependencyManagement>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>io.quarkus</groupId>
+                <artifactId>quarkus-extension-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

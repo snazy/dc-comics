@@ -8,7 +8,7 @@ const FeatureList = [
     icon: <img src="img/deadline.png" width="60px" />,
     description: (
       <>
-        DC Comic includes a very light IoC framework, build time oriented.
+        DC Comics is powered by <a href="https://quarkus.io">Quarkus</a>, the supersonic/subatomic Java framework. 
       </>
     ),
   },
@@ -17,16 +17,16 @@ const FeatureList = [
     icon: <img src="img/cloud.png" width="60px" />,
     description: (
       <>
-        DC Comic is cloud native, with seamless integration with Kubernetes. It also support GraalVM natively to bootstrap efficienly.
+        DC Comics is cloud native, with seamless integration with Kubernetes. It also support GraalVM natively to bootstrap efficienly.
       </>
     ),
   },
   {
-    title: 'Turnkey extensions',
+    title: 'Turnkey extension',
     icon: <img src="img/deal.png" width="60px" />,
     description: (
       <>
-        DC Comic brings turnkey extensions you can leverage at no cost in your cloud applications: structured logging, telemetry, gRPC, ...
+        DC Comics brings a single extension that bring all features/extensions needed for Dremio services (structured logging, telemetry, gRPC, ...). The extensions are lazy loaded meaning that they are actually loaded only when the service is concretely using it.
       </>
     ),
   },
