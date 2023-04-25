@@ -33,9 +33,9 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>io.quarkus</groupId>
-                <artifactId>quarkus-bom</artifactId>
-                <version>${quarkus.version}</version>
+                <groupId>com.dremio.cloud.comics</groupId>
+                <artifactId>dc-comics-bom</artifactId>
+                <version>${project.version}</version>
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
@@ -44,12 +44,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-grpc</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-resteasy-reactive</artifactId>
+            <groupId>com.dremio.cloud.comics</groupId>
+            <artifactId>dc-comics-extension</artifactId>
         </dependency>
     </dependencies>
 

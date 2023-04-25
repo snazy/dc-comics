@@ -33,7 +33,6 @@
 
     <properties>
         <quarkus.version>3.0.0.CR2</quarkus.version>
-
     </properties>
 
     <dependencyManagement>
@@ -61,6 +60,13 @@
             </dependency>
 
             <!-- Netty -->
+
+            <!-- DC Comics -->
+            <dependency>
+                <groupId>com.dremio.cloud.comics</groupId>
+                <artifactId>dc-comics-extension</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

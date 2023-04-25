@@ -1,0 +1,12 @@
+---
+artifact: ${project.groupId}:${project.artifactId}:${project.version}
+name: "DC Comics"
+metadata:
+  keywords:
+    - "dc-comics"
+  guide: "https://jbonofre.github.com/dc-comics"
+  categories:
+    - "cloud"
+  status: "testing"
+  config:
+    - "dremio.comics."
