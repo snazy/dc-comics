@@ -32,7 +32,6 @@
 
     <modules>
         <module>dc-comics-bom</module>
-        <module>dc-comics-banner</module>
         <!-- <module>dc-comics-maven-plugin</module> -->
         <module>dc-comics-extension</module>
         <module>dc-comics</module>
@@ -68,12 +67,27 @@
             </dependency>
             <dependency>
                 <groupId>io.quarkus</groupId>
+                <artifactId>quarkus-logging-json</artifactId>
+                <version>${quarkus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.quarkus</groupId>
                 <artifactId>quarkus-grpc</artifactId>
                 <version>${quarkus.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.quarkus</groupId>
                 <artifactId>quarkus-opentelemetry</artifactId>
+                <version>${quarkus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.quarkus</groupId>
+                <artifactId>quarkus-rest-client</artifactId>
+                <version>${quarkus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.quarkus</groupId>
+                <artifactId>quarkus-resteasy-reactive</artifactId>
                 <version>${quarkus.version}</version>
             </dependency>
 

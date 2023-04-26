@@ -37,20 +37,7 @@
             <!-- Quarkus -->
             <dependency>
                 <groupId>io.quarkus</groupId>
-                <artifactId>quarkus-bom-quarkus-platform-descriptor</artifactId>
-                <version>${quarkus.version}</version>
-                <type>json</type>
-                <classifier>${quarkus.version}</classifier>
-            </dependency>
-            <dependency>
-                <groupId>io.quarkus</groupId>
-                <artifactId>quarkus-bom-quarkus-platform-properties</artifactId>
-                <version>${quarkus.version}</version>
-                <type>properties</type>
-            </dependency>
-            <dependency>
-                <groupId>io.quarkus</groupId>
-                <artifactId>quarkus-bootstrap-bom</artifactId>
+                <artifactId>quarkus-bom</artifactId>
                 <version>${quarkus.version}</version>
                 <type>pom</type>
                 <scope>import</scope>

@@ -34,11 +34,6 @@
     <dependencies>
         <dependency>
             <groupId>com.dremio.cloud.comics</groupId>
-            <artifactId>dc-comics-banner</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.dremio.cloud.comics</groupId>
             <artifactId>dc-comics-extension</artifactId>
             <version>${project.version}</version>
         </dependency>
