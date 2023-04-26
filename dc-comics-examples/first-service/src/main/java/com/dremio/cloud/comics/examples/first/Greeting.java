@@ -6,6 +6,7 @@ import io.opentelemetry.api.trace.Tracer;
 import io.opentelemetry.context.Context;
 import io.opentelemetry.instrumentation.annotations.WithSpan;
 import io.quarkus.runtime.ShutdownEvent;
+import io.quarkus.runtime.Startup;
 import io.quarkus.runtime.StartupEvent;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.event.Observes;
@@ -29,6 +30,7 @@ public class Greeting {
                                                 .startSpan();
         span.addEvent("Starting ...");
         logger.info("Hello world !");
+        span.addEvent("I'm done");
         span.end();
     }
 
